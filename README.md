@@ -1,6 +1,9 @@
 # weibo-search webConfig
 
-Weibo Search WebConfig 是一个基于 [dataabc/weibo-search](https://github.com/dataabc/weibo-search) 的可视化微博爬虫配置工具，旨在简化对微博爬虫的设置和运行。通过友好的图形界面，用户无需直接修改代码即可完成配置和启动爬虫任务。
+Weibo Search WebConfig 是一个基于 [dataabc/weibo-search](https://github.com/dataabc/weibo-search) 的可视化微博爬虫配置工具。
+
+[点击跳转至快速开始](#quick-start)
+
 
 ## 功能
 
@@ -32,7 +35,7 @@ Weibo Search WebConfig 是一个基于 [dataabc/weibo-search](https://github.com
 - 结果文件：保存在当前目录“结果文件”文件夹下以关键词为名的文件夹里
 - user_authentication：微博用户类型，值分别是`蓝v`，`黄v`，`红v`，`金v`和`普通用户`
 
-## 快速开始
+## 快速开始 {#quick-start}
 
 1. 克隆本仓库到本地：
 
@@ -87,6 +90,7 @@ Weibo Search WebConfig 是一个基于 [dataabc/weibo-search](https://github.com
 
 ## todo
 
+- [ ] 不要让浏览器误以为这是个可以保存的密码 🔒
 - [ ] 支持下载图片和视频 🌄
 - [ ] 在界面中显示日志 📔
 - [ ] 在界面中显示爬虫进度可视化 📈
