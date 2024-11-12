@@ -46,7 +46,7 @@ Weibo Search WebConfig 是一个基于 [dataabc/weibo-search](https://github.com
    cd weibo-search-webconfig
    ```
 
-3. 安装依赖（假设使用 Python 和 Flask）：
+3. 安装依赖：
 
    ```bash
    pip install -r requirements.txt
