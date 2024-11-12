@@ -90,7 +90,7 @@ weibo-search webConfig 是一个基于 [dataabc/weibo-search](https://github.com
 
 ## todo
 
-- [ ] 不要让浏览器误以为这是个可以保存的密码 🔒
+- [x] 不要让浏览器误以为这是个可以保存的密码 🔒
 - [ ] 支持下载图片和视频 🌄
 - [ ] 在界面中显示日志 📔
 - [ ] 在界面中显示爬虫进度可视化 📈
