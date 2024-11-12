@@ -19,11 +19,11 @@
             <section id="basic" class="col s12 config-section">
                 <h5>基本设置</h5>
                 <div class="input-field">
-                    <input id="project-name" type="text" required>
+                    <input id="project-name" type="text" required autocomplete="off">
                     <label for="project-name">项目名称</label>
                 </div>
                 <div class="input-field">
-                    <textarea id="cookie" class="materialize-textarea" required></textarea>
+                    <textarea id="cookie" class="materialize-textarea" required autocomplete="off"></textarea>
                     <label for="cookie">Cookie设置</label>
                     <a href="#cookie-help-modal" class="helper-text modal-trigger">如何获取Cookie?</a>
                 </div>
@@ -33,7 +33,7 @@
                 <h5>关键词设置</h5>
                 <div id="keywords-container">
                     <div class="keyword-input input-field">
-                        <input type="text" class="keyword" required>
+                        <input type="text" class="keyword" required autocomplete="off">
                         <label>搜索关键词</label>
                         <button class="btn-floating waves-effect waves-light red remove-keyword">
                             <i class="material-icons">remove</i>
@@ -99,7 +99,7 @@
                     </label>
                     <div id="mongodb-config" class="database-config" style="display: none;">
                         <div class="input-field">
-                            <input type="text" id="mongo-url" value="localhost" required>
+                            <input type="text" id="mongo-url" value="localhost" required autocomplete="off">
                             <label for="mongo-url">MONGO_URL</label>
                         </div>
                     </div>
@@ -119,7 +119,7 @@
                             <label for="mysql-port">MYSQL_PORT</label>
                         </div>
                         <div class="input-field">
-                            <input type="text" id="mysql-user" value="root" required>
+                            <input type="text" id="mysql-user" value="root" required autocomplete="off">
                             <label for="mysql-user">MYSQL_USER</label>
                         </div>
                         <div class="input-field">
@@ -127,7 +127,7 @@
                             <label for="mysql-password">MYSQL_PASSWORD</label>
                         </div>
                         <div class="input-field">
-                            <input type="text" id="mysql-database" value="weibo" required>
+                            <input type="text" id="mysql-database" value="weibo" required autocomplete="off">
                             <label for="mysql-database">MYSQL_DATABASE</label>
                         </div>
                     </div>
