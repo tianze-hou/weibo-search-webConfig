@@ -1,0 +1,153 @@
+/* 基础间距单位 */
+:root {
+    --spacing-unit: 15px;
+}
+
+/* 通用边距和填充 */
+.config-section,
+.tab-content,
+.tab-navigation,
+.chart-container,
+.cookie-help-steps {
+    padding: calc(var(--spacing-unit) * 3);
+}
+
+.progress-section,
+.control-buttons,
+.cookie-help-steps,
+.add-keyword {
+    margin-bottom: var(--spacing-unit);
+}
+
+/* Tab 内容 */
+.tab-content {
+    padding: calc(var(--spacing-unit) * 3);
+    position: relative;
+}
+
+/* 关键字输入 */
+.keyword-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: calc(var(--spacing-unit) * 1.25);
+}
+
+.keyword-input input {
+    margin-right: var(--spacing-unit);
+}
+
+/* 日志输出 */
+.log-output {
+    height: 200px;
+    overflow-y: auto;
+    background: #f5f5f5;
+    padding: var(--spacing-unit);
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+/* 开关样式 */
+.switch label input[type=checkbox]:checked + .lever {
+    background-color: #84c7c1;
+}
+
+.switch label input[type=checkbox]:checked + .lever:after {
+    background-color: #26a69a;
+}
+
+/* Tab 导航 */
+.tab-navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: calc(var(--spacing-unit) * 3);
+}
+
+.tabs .indicator {
+    background-color: #2196F3;
+}
+
+.tabs .tab a.active {
+    color: #2196F3;
+}
+
+.tabs .tab a:hover {
+    color: #64B5F6;
+}
+
+/* Tab 箭头 */
+.tab-arrow {
+    position: absolute;
+    right: calc(var(--spacing-unit) * -2.5);
+    top: 50%;
+    transform: translateY(-50%);
+    color: #2196F3;
+    animation: bounce 2s infinite;
+    z-index: 10;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(-50%); }
+    40% { transform: translateY(-30%); }
+    60% { transform: translateY(-70%); }
+}
+
+/* 图表容器 */
+.chart-container {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    margin: calc(var(--spacing-unit) * 2) 0;
+}
+
+.chart-controls {
+    text-align: right;
+    margin: var(--spacing-unit) 0;
+}
+
+/* Cookie 帮助步骤 */
+.cookie-help-steps img {
+    margin: calc(var(--spacing-unit) * 1.875) 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+/* 模态框 */
+.modal {
+    max-height: 90% !important;
+}
+
+/* 数据库配置 */
+.database-config {
+    margin-top: var(--spacing-unit);
+    margin-bottom: var(--spacing-unit);
+    padding: var(--spacing-unit);
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    display: none;
+}
+
+/* 阈值帮助 */
+.threshold-help {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: var(--spacing-unit);
+    padding: var(--spacing-unit);
+    background: #f5f5f5;
+    border-radius: 4px;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: var(--spacing-unit);
+}
+
+.input-field input[type="range"] {
+    display: block;
+    width: 100%;
+    padding-top: var(--spacing-unit);
+}
+
+/* 添加section之间的统一间距 */
+.config-section {
+    margin-bottom: calc(var(--spacing-unit) * 4); /* 可以根据需要调整数值 */
+}

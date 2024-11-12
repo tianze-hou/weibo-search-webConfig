@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>weibo-search webConfig</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <nav class="blue darken-3">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">weibo-search webConfig</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="row">
+            <section id="basic" class="col s12 config-section">
+                <h5>基本设置</h5>
+                <div class="input-field">
+                    <input id="project-name" type="text" required>
+                    <label for="project-name">项目名称</label>
+                </div>
+                <div class="input-field">
+                    <textarea id="cookie" class="materialize-textarea" required></textarea>
+                    <label for="cookie">Cookie设置</label>
+                    <a href="#cookie-help-modal" class="helper-text modal-trigger">如何获取Cookie?</a>
+                </div>
+            </section>
+            
+            <section id="search" class="col s12 config-section">
+                <h5>关键词设置</h5>
+                <div id="keywords-container">
+                    <div class="keyword-input input-field">
+                        <input type="text" class="keyword" required>
+                        <label>搜索关键词</label>
+                        <button class="btn-floating waves-effect waves-light red remove-keyword">
+                            <i class="material-icons">remove</i>
+                        </button>
+                    </div>
+                </div>
+                <button class="btn waves-effect waves-light add-keyword">
+                    <i class="material-icons left">add</i>添加关键词
+                </button>
+            </section>
+
+            <section id="search" class="col s12 config-section">
+                <h5>时间和筛选</h5>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input type="text" class="datepicker" id="start-date" required>
+                        <label for="start-date">起始日期</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="text" class="datepicker" id="end-date" required>
+                        <label for="end-date">结束日期</label>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="input-field col s6">
+                        <select id="weibo-type">
+                            <option value="0">全部微博</option>
+                            <option value="1" selected>原创微博</option>
+                            <option value="2">热门微博</option>
+                            <option value="3">关注人微博</option>
+                            <option value="4">认证用户微博</option>
+                            <option value="5">媒体微博</option>
+                            <option value="6">观点微博</option>
+                        </select>
+                        <label>微博类型</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select id="contain-type">
+                            <option value="0" selected>不筛选</option>
+                            <option value="1">包含图片</option>
+                            <option value="2">包含视频</option>
+                            <option value="3">包含音乐</option>
+                            <option value="4">包含短链接</option>
+                        </select>
+                        <label>内容筛选</label>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="advanced" class="col s12 config-section">
+                <h5>数据保存配置</h5>
+                <div>
+                    <label>
+                        <input type="checkbox" class="filled-in" id="save-csv" checked />
+                        <span>保存为CSV</span>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" class="filled-in" id="save-mongodb" />
+                        <span>保存到MongoDB</span>
+                    </label>
+                    <div id="mongodb-config" class="database-config" style="display: none;">
+                        <div class="input-field">
+                            <input type="text" id="mongo-url" value="localhost" required>
+                            <label for="mongo-url">MONGO_URL</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" class="filled-in" id="save-mysql" />
+                        <span>保存到MySQL</span>
+                    </label>
+                    <div id="mysql-config" class="database-config" style="display: none;">
+                        <div class="input-field">
+                            <input type="text" id="mysql-host" value="localhost" required>
+                            <label for="mysql-host">MYSQL_HOST</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="number" id="mysql-port" value="3306" required>
+                            <label for="mysql-port">MYSQL_PORT</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="mysql-user" value="root" required>
+                            <label for="mysql-user">MYSQL_USER</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" id="mysql-password" value="123456" required>
+                            <label for="mysql-password">MYSQL_PASSWORD</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="mysql-database" value="weibo" required>
+                            <label for="mysql-database">MYSQL_DATABASE</label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="basic" class="col s12 config-section">
+                <h5>搜索精度设置</h5>
+                <div class="input-field">
+                    <input type="range" id="threshold" min="40" max="50" value="46" />
+                    <span class="helper-text">
+                        数值越大速度越快，也越有可能漏掉微博；数值越小速度越慢，获取的微博就越多。建议保持默认。
+                    </span>
+                </div>
+            </section>
+            
+            <section id="results" class="col s12 config-section center-align">
+                <button class="btn-large waves-effect waves-light green" id="start-btn">
+                    <i class="material-icons left">play_arrow</i>开始运行
+                </button>
+            </section>
+        </div>
+    </div>
+    
+    <div id="cookie-help-modal" class="modal">
+        <div class="modal-content">
+            <h4>如何获取Cookie</h4>
+            <ol class="cookie-help-steps">
+                <li>用Chrome打开 <a href="https://weibo.com/" target="_blank">https://weibo.com/</a></li>
+                <li>点击"立即登录"，完成验证，进入新版微博。
+                    <div class="center-align">
+                        <img src="{{ url_for('static', filename='img/cookie_1.png') }}" alt="微博登录界面截图" class="responsive-img" width="400">
+                    </div>
+                </li>
+                <li>按F12打开开发者工具，定位到 Network → weibo.cn → Headers → Request Headers，复制 "Cookie:" 后的值。</li>
+                <li>
+                    <div class="center-align">
+                        <img src="{{ url_for('static', filename='img/cookie_2.png') }}" alt="Chrome开发者工具中Cookie位置的截图" class="responsive-img" width="400">
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">了解了</a>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
