@@ -1,6 +1,6 @@
 # weibo-search webConfig
 
-Weibo Search WebConfig 是一个基于 [dataabc/weibo-search](https://github.com/dataabc/weibo-search) 的可视化微博爬虫配置工具。
+weibo-search webConfig 是一个基于 [dataabc/weibo-search](https://github.com/dataabc/weibo-search) 的可视化微博爬虫配置工具。
 
 [点击跳转至快速开始](#快速开始)
 
