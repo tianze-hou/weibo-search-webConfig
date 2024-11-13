@@ -37,6 +37,8 @@ weibo-search webConfig 是一个基于 [dataabc/weibo-search](https://github.com
 
 ## 快速开始
 
+0. 在开始之前，你需要安装git。可以在搜索引擎上找到指引。
+
 1. 克隆本仓库到本地：
 
    ```bash
@@ -75,7 +77,7 @@ weibo-search webConfig 是一个基于 [dataabc/weibo-search](https://github.com
 
 ## 使用说明
 
-所有配置在 `setting.py` 文件中完成，该文件位于 “weibo-search\weibo\settings.py”。**正常使用可视化配置的情况下不需要打开文件进行手动配置**。具体配置项可参考原项目[dataabc/weibo-search](https://github.com/dataabc/weibo-search)。
+所有配置在 `settings.py` 文件中完成，该文件位于 “weibo-search\weibo\settings.py”。**正常使用可视化配置的情况下不需要打开文件进行手动配置**。具体配置项可参考原项目[dataabc/weibo-search](https://github.com/dataabc/weibo-search)。
 
 ### 获取 Cookie
 
