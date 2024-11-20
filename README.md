@@ -103,3 +103,5 @@ weibo-search webConfig 是一个基于 [dataabc/weibo-search](https://github.com
 此项目基于MIT许可证开源 - 详情参见[LICENSE](LICENSE)文件。
 
 生生不息，繁荣昌盛。
+
+[![Star History Chart](https://api.star-history.com/svg?repos=tianze-hou/weibo-search-webConfig&type=Date)](https://star-history.com/#tianze-hou/weibo-search-webConfig&Date)
