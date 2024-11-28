@@ -37,7 +37,7 @@ weibo-search webConfig 是一个基于 [dataabc/weibo-search](https://github.com
 
 ## 快速开始
 
-0. 在开始之前，你需要安装git。可以在搜索引擎上找到指引。
+0. 在开始之前，你需要安装git。可以在搜索引擎上找到指引。或者使用页面上方的 `code` ——> `Download ZIP` 按钮也可以下载到本地，后续配置也需要在终端中手动打开保存的目录。
 
 1. 克隆本仓库到本地：
 
